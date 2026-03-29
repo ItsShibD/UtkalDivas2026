@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Leaderboard — Utkal Divas 2026 · NISER</title>
+  <meta name="description" content="Online Quiz Leaderboard for Utkal Divas 2026 at NISER. See the top scorers and rankings." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>" />
+  <style>
+    .lb-status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .lb-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .lb-status-live {
+      background: rgba(20, 160, 80, 0.15);
+      color: #14a050;
+      border: 1px solid rgba(20,160,80,0.3);
+    }
+    .lb-status-pill .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #14a050;
+      animation: blink 1.2s ease infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.2; }
+    }
+    .lb-status-info {
+      background: var(--warm-light);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+    .quiz-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .quiz-info-card {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-light);
+    }
+    .quiz-info-card .qi-icon { font-size: 1.6rem; margin-bottom: 0.4rem; }
+    .quiz-info-card .qi-val {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--saffron);
+      margin-bottom: 0.2rem;
+    }
+    .quiz-info-card .qi-label { font-size: 0.78rem; color: var(--text-muted); }
+    .top-rank td { background: linear-gradient(90deg, rgba(196,155,12,0.07), transparent) !important; }
+    tr.top-rank:hover td { background: linear-gradient(90deg, rgba(196,155,12,0.13), rgba(253,246,237,0.5)) !important; }
+    .dept-badge {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+      background: var(--warm-light);
+      color: var(--text-muted);
+    }
+    .time-badge {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    @media (max-width: 600px) {
+      .quiz-info-grid { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-main">Utkal Divas 2026</span>
+      <span class="nav-logo-sub">NISER · Bhubaneswar</span>
+    </a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="guests.html">Guests</a></li>
+      <li><a href="events.html" class="nav-cta">Register →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ======================================================
+     LEADERBOARD HERO (dark)
+     ====================================================== -->
+<section class="leaderboard-hero">
+  <img src="assets/wheel.svg" class="page-hero-wheel" alt="" aria-hidden="true" style="right:-80px;bottom:-80px;width:350px;opacity:0.05;" />
+  <img src="assets/wheel.svg" class="page-hero-wheel" alt="" aria-hidden="true" style="left:-80px;top:20%;right:auto;width:250px;opacity:0.04;animation-direction:reverse;" />
+  <div class="container">
+    <div style="font-size:2.5rem; margin-bottom:0.5rem;">🏆</div>
+    <h1 class="section-title">Quiz Leaderboard</h1>
+    <div class="ornament" style="justify-content:center;">
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+    </div>
+    <p class="section-subtitle">Utkal Divas Online Quiz · April 1, 2026 · NISER</p>
+
+    <!-- Podium -->
+    <div id="podium" class="podium-grid"></div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FULL LEADERBOARD TABLE
+     ====================================================== -->
+<section class="section">
+  <div class="container">
+
+    <!-- Status bar -->
+    <div class="lb-status-bar animate-on-scroll">
+      <span class="lb-status-pill lb-status-live">
+        <span class="dot"></span> Live Leaderboard
+      </span>
+      <span class="lb-status-pill lb-status-info">
+        🕐 Last updated: April 1, 2026 · 3:05 PM
+      </span>
+      <span class="lb-status-pill lb-status-info">
+        👥 12 participants ranked
+      </span>
+    </div>
+
+    <!-- Quiz info cards -->
+    <div class="quiz-info-grid animate-on-scroll">
+      <div class="quiz-info-card">
+        <div class="qi-icon">📋</div>
+        <div class="qi-val">40</div>
+        <div class="qi-label">Total Questions</div>
+      </div>
+      <div class="quiz-info-card">
+        <div class="qi-icon">⏱️</div>
+        <div class="qi-val">30 min</div>
+        <div class="qi-label">Time Limit</div>
+      </div>
+      <div class="quiz-info-card">
+        <div class="qi-icon">🎯</div>
+        <div class="qi-val">80 pts</div>
+        <div class="qi-label">Max Score</div>
+      </div>
+      <div class="quiz-info-card">
+        <div class="qi-icon">🏛️</div>
+        <div class="qi-val">Odia Heritage</div>
+        <div class="qi-label">Theme</div>
+      </div>
+    </div>
+
+    <!-- Full rankings table -->
+    <h2 class="section-title animate-on-scroll" style="font-size:1.5rem; text-align:left; margin-bottom:0.25rem;">
+      Full Rankings
+    </h2>
+    <div class="ornament animate-on-scroll" style="justify-content:flex-start; margin-left:0; margin-bottom:1.5rem;">
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+    </div>
+
+    <div class="leaderboard-table-wrap animate-on-scroll">
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Score</th>
+            <th>Time Taken</th>
+          </tr>
+        </thead>
+        <tbody id="lb-tbody"></tbody>
+      </table>
+    </div>
+
+    <p style="text-align:center; margin-top:1.5rem; font-size:0.8rem; color:var(--text-muted);">
+      ✦ Scores shown are out of 80 · 2 marks per correct answer · No negative marking ✦
+    </p>
+  </div>
+</section>
+
+<!-- ======================================================
+     QUIZ CTA
+     ====================================================== -->
+<section class="section section-alt" style="padding:2.5rem 0;">
+  <div class="container" style="text-align:center;">
+    <h3 class="animate-on-scroll" style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:0.75rem;">
+      Quiz opens on April 1, 2026 at 2:00 PM
+    </h3>
+    <p class="animate-on-scroll" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;">
+      Test your knowledge of Odia history, culture, literature, and geography. The leaderboard updates live.
+    </p>
+    <div class="animate-on-scroll">
+      <a href="events.html" class="btn btn-primary">Learn More About the Quiz →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Utkal Divas 2026</div>
+  <div style="font-family:'Noto Serif Odia',serif; font-size:1rem; color:rgba(253,246,237,0.5); margin-top:0.2rem;">
+    ଉତ୍କଳ ଦିବସ · ଏନ୍ଆଇଏସ୍ଇଆର୍
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <a href="guests.html">Guests</a>
+  </div>
+  <div class="footer-sub">Organized by the Cultural Committee, NISER Bhubaneswar · April 1, 2026</div>
+  <div style="margin-top:1rem; font-size:0.75rem; color:rgba(253,246,237,0.25);">&copy; 2026 NISER Cultural Committee.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

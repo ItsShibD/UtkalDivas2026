@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="192" stroke="white" stroke-width="3"/>
+  <circle cx="200" cy="200" r="178" stroke="white" stroke-width="1" stroke-dasharray="6 4"/>
+  <!-- Hub -->
+  <circle cx="200" cy="200" r="30" stroke="white" stroke-width="2.5"/>
+  <circle cx="200" cy="200" r="18" stroke="white" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="8"  fill="white" opacity="0.6"/>
+  <!-- 24 spokes -->
+  <g stroke="white" stroke-width="1.5">
+    <line x1="200" y1="200" x2="200" y2="8"/>
+    <line x1="200" y1="200" x2="200" y2="392"/>
+    <line x1="200" y1="200" x2="8"   y2="200"/>
+    <line x1="200" y1="200" x2="392" y2="200"/>
+    <line x1="200" y1="200" x2="127.4" y2="18.8"/>
+    <line x1="200" y1="200" x2="272.6" y2="381.2"/>
+    <line x1="200" y1="200" x2="381.2" y2="127.4"/>
+    <line x1="200" y1="200" x2="18.8"  y2="272.6"/>
+    <line x1="200" y1="200" x2="68.6"  y2="44.9"/>
+    <line x1="200" y1="200" x2="331.4" y2="355.1"/>
+    <line x1="200" y1="200" x2="355.1" y2="331.4"/>
+    <line x1="200" y1="200" x2="44.9"  y2="68.6"/>
+    <line x1="200" y1="200" x2="18.8"  y2="127.4" transform="rotate(0 200 200)"/>
+    <line x1="200" y1="200" x2="381.2" y2="272.6"/>
+    <line x1="200" y1="200" x2="272.6" y2="18.8"/>
+    <line x1="200" y1="200" x2="127.4" y2="381.2"/>
+    <line x1="200" y1="200" x2="44.9"  y2="331.4" transform="rotate(0 200 200)"/>
+    <line x1="200" y1="200" x2="355.1" y2="68.6"/>
+    <line x1="200" y1="200" x2="331.4" y2="44.9"/>
+    <line x1="200" y1="200" x2="68.6"  y2="355.1"/>
+  </g>
+  <!-- Decorative outer medallions (24 positions simplified to 8) -->
+  <g fill="white" opacity="0.7">
+    <circle cx="200" cy="11"  r="4"/>
+    <circle cx="200" cy="389" r="4"/>
+    <circle cx="11"  cy="200" r="4"/>
+    <circle cx="389" cy="200" r="4"/>
+    <circle cx="65"  cy="65"  r="4"/>
+    <circle cx="335" cy="335" r="4"/>
+    <circle cx="335" cy="65"  r="4"/>
+    <circle cx="65"  cy="335" r="4"/>
+  </g>
+  <!-- Inner decorative ring details -->
+  <circle cx="200" cy="200" r="60"  stroke="white" stroke-width="1" stroke-dasharray="3 5"/>
+  <circle cx="200" cy="200" r="100" stroke="white" stroke-width="0.8" stroke-dasharray="2 6"/>
+  <!-- Lotus petals suggestion (inner) -->
+  <g stroke="white" stroke-width="1" opacity="0.5">
+    <ellipse cx="200" cy="165" rx="10" ry="25" transform="rotate(0   200 200)"/>
+    <ellipse cx="200" cy="165" rx="10" ry="25" transform="rotate(45  200 200)"/>
+    <ellipse cx="200" cy="165" rx="10" ry="25" transform="rotate(90  200 200)"/>
+    <ellipse cx="200" cy="165" rx="10" ry="25" transform="rotate(135 200 200)"/>
+    <ellipse cx="200" cy="165" rx="10" ry="25" transform="rotate(180 200 200)"/>
+    <ellipse cx="200" cy="165" rx="10" ry="25" transform="rotate(225 200 200)"/>
+    <ellipse cx="200" cy="165" rx="10" ry="25" transform="rotate(270 200 200)"/>
+    <ellipse cx="200" cy="165" rx="10" ry="25" transform="rotate(315 200 200)"/>
+  </g>
+</svg>

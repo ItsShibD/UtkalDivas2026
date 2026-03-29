@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events — Utkal Divas 2026 · NISER</title>
+  <meta name="description" content="All events at Utkal Divas 2026 — NISER Bhubaneswar. Poetry, painting, quiz, jhoti, rangoli, Odissi dance, and cultural programme." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 0.6rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--saffron);
+      color: var(--white);
+      border-color: var(--saffron);
+    }
+    .schedule-strip {
+      background: linear-gradient(135deg, var(--saffron), var(--gold));
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: var(--white);
+    }
+    .schedule-strip-text h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+    .schedule-strip-text p { font-size: 0.85rem; opacity: 0.85; }
+    .schedule-timeline {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .sched-pill {
+      background: rgba(255,255,255,0.25);
+      border-radius: 50px;
+      padding: 0.3rem 0.85rem;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+    .sched-pill strong { opacity:1; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-main">Utkal Divas 2026</span>
+      <span class="nav-logo-sub">NISER · Bhubaneswar</span>
+    </a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="guests.html">Guests</a></li>
+      <li><a href="events.html" class="nav-cta">Register →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ======================================================
+     PAGE HERO
+     ====================================================== -->
+<section class="page-hero">
+  <img src="assets/wheel.svg" class="page-hero-wheel" alt="" aria-hidden="true" />
+  <div class="container">
+    <h1 class="section-title">All Events</h1>
+    <div class="ornament" style="justify-content:center;">
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+    </div>
+    <p class="section-subtitle">April 1, 2026 · Click any event to see details, schedule &amp; rules</p>
+  </div>
+</section>
+
+<!-- ======================================================
+     EVENTS SECTION
+     ====================================================== -->
+<section class="section">
+  <div class="container">
+
+    <!-- Quick schedule strip -->
+    <div class="schedule-strip animate-on-scroll">
+      <div class="schedule-strip-text">
+        <h3>📅 Day at a Glance — April 1, 2026</h3>
+        <p>All events take place at NISER, Bhubaneswar</p>
+      </div>
+      <div class="schedule-timeline">
+        <span class="sched-pill"><strong>10 AM</strong> Poetry</span>
+        <span class="sched-pill"><strong>11 AM</strong> Painting</span>
+        <span class="sched-pill"><strong>2 PM</strong> Quiz</span>
+        <span class="sched-pill"><strong>3 PM</strong> Jhoti</span>
+        <span class="sched-pill"><strong>3:30 PM</strong> Rangoli</span>
+        <span class="sched-pill"><strong>6 PM</strong> Odissi</span>
+        <span class="sched-pill"><strong>7 PM</strong> Cultural</span>
+      </div>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="filter-bar animate-on-scroll">
+      <button class="filter-btn active" data-filter="all">All Events</button>
+      <button class="filter-btn" data-filter="literary">Literary</button>
+      <button class="filter-btn" data-filter="arts">Arts</button>
+      <button class="filter-btn" data-filter="knowledge">Quiz</button>
+      <button class="filter-btn" data-filter="traditional">Traditional</button>
+      <button class="filter-btn" data-filter="performing">Performing</button>
+      <button class="filter-btn" data-filter="cultural">Cultural</button>
+    </div>
+
+    <!-- Events grid (populated by JS) -->
+    <div id="events-grid" class="events-grid"></div>
+
+  </div>
+</section>
+
+<!-- ======================================================
+     REGISTRATION CTA
+     ====================================================== -->
+<section class="section section-alt" style="padding:3rem 0;">
+  <div class="container" style="text-align:center;">
+    <h2 class="section-title animate-on-scroll" style="font-size:1.8rem;">Ready to Participate?</h2>
+    <p class="section-subtitle animate-on-scroll" style="margin-bottom:1.5rem;">
+      Most events are open to all NISER students and faculty. Registrations open from March 20, 2026.
+    </p>
+    <div class="animate-on-scroll">
+      <a href="#" class="btn btn-primary" style="margin-right:1rem;">Register for Events</a>
+      <a href="leaderboard.html" class="btn btn-outline">View Leaderboard →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FOOTER
+     ====================================================== -->
+<footer>
+  <div class="footer-logo">Utkal Divas 2026</div>
+  <div style="font-family:'Noto Serif Odia',serif; font-size:1rem; color:rgba(253,246,237,0.5); margin-top:0.2rem;">
+    ଉତ୍କଳ ଦିବସ · ଏନ୍ଆଇଏସ୍ଇଆର୍
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <a href="guests.html">Guests</a>
+  </div>
+  <div class="footer-sub">Organized by the Cultural Committee, NISER Bhubaneswar · April 1, 2026</div>
+  <div style="margin-top:1rem; font-size:0.75rem; color:rgba(253,246,237,0.25);">&copy; 2026 NISER Cultural Committee.</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="event-modal" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-header-accent"></div>
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-icon">🎨</div>
+      <div class="modal-category">Category</div>
+      <h2 class="modal-title">Event Title</h2>
+      <div class="modal-odia">ଇଭେଣ୍ଟ</div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-info-grid">
+        <div class="modal-info-item">
+          <div class="modal-info-label">📅 Date</div>
+          <div class="modal-info-value" id="modal-date">—</div>
+        </div>
+        <div class="modal-info-item">
+          <div class="modal-info-label">🕐 Time</div>
+          <div class="modal-info-value" id="modal-time">—</div>
+        </div>
+        <div class="modal-info-item">
+          <div class="modal-info-label">📍 Venue</div>
+          <div class="modal-info-value" id="modal-venue">—</div>
+        </div>
+        <div class="modal-info-item">
+          <div class="modal-info-label">📝 Registration</div>
+          <div class="modal-info-value" id="modal-reg">—</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>About the Event</h4>
+        <p id="modal-desc"></p>
+      </div>
+      <div class="modal-section">
+        <h4>Rules &amp; Guidelines</h4>
+        <div class="modal-rules" id="modal-rules"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Filter functionality
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.event-card').forEach(card => {
+        const category = card.querySelector('.event-card-category').textContent.toLowerCase();
+        if (filter === 'all' || category.includes(filter)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

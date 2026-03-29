@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guests &amp; Speakers — Utkal Divas 2026 · NISER</title>
+  <meta name="description" content="Invited guests and speakers for Utkal Divas 2026 at NISER Bhubaneswar." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
+  <style>
+    .guests-hero-detail {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .notify-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 440px;
+      margin: 0 auto 2rem;
+      flex-wrap: wrap;
+    }
+    .notify-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.7rem 1.2rem;
+      border-radius: 50px;
+      border: 1.5px solid rgba(196,155,12,0.4);
+      background: rgba(255,255,255,0.1);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      backdrop-filter: blur(8px);
+      outline: none;
+    }
+    .notify-input::placeholder { color: rgba(253,246,237,0.45); }
+    .notify-input:focus { border-color: var(--gold-light); }
+
+    /* Extended guest card styles */
+    .guests-grid-full {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .guest-card-full {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-light);
+      text-align: center;
+      transition: var(--transition);
+      animation: fade-up 0.6s ease both;
+    }
+    .guest-card-full:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .guest-avatar-full {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .avatar-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .avatar-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(24,6,0,0.70);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .avatar-emoji { font-size: 2rem; }
+    .avatar-tag {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 50px;
+      background: rgba(196,155,12,0.3);
+      color: var(--gold-light);
+      border: 1px solid rgba(196,155,12,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .avatar-reveal-text {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+    .guest-card-info { padding: 1.2rem 1rem 1.4rem; }
+    .guest-card-name {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+    .guest-card-role { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .guest-card-org {
+      font-size: 0.75rem;
+      color: var(--saffron);
+      font-weight: 500;
+    }
+
+    /* Gradient backgrounds per card */
+    .grad-1 { background: linear-gradient(135deg, #3d1200, #8b3a08); }
+    .grad-2 { background: linear-gradient(135deg, #1a003d, #5a1a8b); }
+    .grad-3 { background: linear-gradient(135deg, #001a3d, #0a4a8b); }
+    .grad-4 { background: linear-gradient(135deg, #003d1a, #0a6b3a); }
+    .grad-5 { background: linear-gradient(135deg, #3d1a00, #8b5a00); }
+    .grad-6 { background: linear-gradient(135deg, #3d0012, #8b0038); }
+
+    .announcement-band {
+      background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
+      background-size: 200% 100%;
+      animation: shimmer 3s ease infinite;
+      color: var(--white);
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .coming-soon-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(253,246,237,0.12);
+      border: 1px solid rgba(253,246,237,0.25);
+      color: rgba(253,246,237,0.75);
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 480px) {
+      .guests-grid-full { grid-template-columns: repeat(2,1fr); }
+      .guest-avatar-full { height: 150px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Announcement band -->
+<div class="announcement-band">
+  ✦ Guest announcements are coming soon — stay tuned for exciting reveals! ✦
+</div>
+
+<nav class="navbar" style="top:36px;">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-main">Utkal Divas 2026</span>
+      <span class="nav-logo-sub">NISER · Bhubaneswar</span>
+    </a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="guests.html">Guests</a></li>
+      <li><a href="events.html" class="nav-cta">Register →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ======================================================
+     PAGE HERO
+     ====================================================== -->
+<section class="page-hero" style="padding-top:9rem;">
+  <img src="assets/wheel.svg" class="page-hero-wheel" alt="" aria-hidden="true" />
+  <div class="container guests-hero-detail">
+    <span class="coming-soon-badge">✨ Announcements coming soon</span>
+    <h1 class="section-title">Guests &amp; Speakers</h1>
+    <div class="ornament" style="justify-content:center;">
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+    </div>
+    <p class="section-subtitle" style="margin-bottom:2rem;">
+      We are delighted to welcome distinguished guests, cultural personalities, and scholars
+      to grace Utkal Divas 2026 at NISER. Their identities will be revealed very soon.
+    </p>
+
+    <!-- Notify form (cosmetic – no backend) -->
+    <p style="color:rgba(253,246,237,0.5); font-size:0.82rem; margin-bottom:0.75rem;">
+      Get notified when guests are announced:
+    </p>
+    <div class="notify-form">
+      <input class="notify-input" type="email" placeholder="Your email address" />
+      <button class="btn btn-gold" style="flex-shrink:0;" onclick="handleNotify(this)">Notify Me</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     GUESTS GRID
+     ====================================================== -->
+<section class="section">
+  <div class="container">
+
+    <h2 class="section-title animate-on-scroll" style="margin-bottom:0.3rem;">
+      Invited Personalities
+    </h2>
+    <div class="ornament animate-on-scroll">
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+    </div>
+    <p class="section-subtitle animate-on-scroll">
+      6 distinguished guests across culture, literature, science &amp; academia
+    </p>
+
+    <div class="guests-grid-full">
+
+      <!-- Card 1 – Chief Guest -->
+      <div class="guest-card-full animate-on-scroll animate-delay-1">
+        <div class="guest-avatar-full">
+          <div class="avatar-bg grad-1"></div>
+          <div class="avatar-overlay">
+            <span class="avatar-emoji">🌟</span>
+            <span class="avatar-tag">Chief Guest</span>
+            <div class="avatar-reveal-text">Revealing Soon</div>
+          </div>
+        </div>
+        <div class="guest-card-info">
+          <div class="guest-card-name">Chief Guest</div>
+          <div class="guest-card-role">Dignitary · April 1, 2026</div>
+          <div class="guest-card-org">Utkal Divas 2026</div>
+        </div>
+      </div>
+
+      <!-- Card 2 – Cultural Icon -->
+      <div class="guest-card-full animate-on-scroll animate-delay-2">
+        <div class="guest-avatar-full">
+          <div class="avatar-bg grad-2"></div>
+          <div class="avatar-overlay">
+            <span class="avatar-emoji">🎭</span>
+            <span class="avatar-tag">Cultural Icon</span>
+            <div class="avatar-reveal-text">Revealing Soon</div>
+          </div>
+        </div>
+        <div class="guest-card-info">
+          <div class="guest-card-name">Cultural Icon</div>
+          <div class="guest-card-role">Arts &amp; Heritage · NISER</div>
+          <div class="guest-card-org">Odisha Cultural Academy</div>
+        </div>
+      </div>
+
+      <!-- Card 3 – Literary Speaker -->
+      <div class="guest-card-full animate-on-scroll animate-delay-3">
+        <div class="guest-avatar-full">
+          <div class="avatar-bg grad-3"></div>
+          <div class="avatar-overlay">
+            <span class="avatar-emoji">📖</span>
+            <span class="avatar-tag">Literary Speaker</span>
+            <div class="avatar-reveal-text">Revealing Soon</div>
+          </div>
+        </div>
+        <div class="guest-card-info">
+          <div class="guest-card-name">Literary Speaker</div>
+          <div class="guest-card-role">Odia Literature · Poetry</div>
+          <div class="guest-card-org">Sahitya Akademi</div>
+        </div>
+      </div>
+
+      <!-- Card 4 – Academic Guest -->
+      <div class="guest-card-full animate-on-scroll animate-delay-1">
+        <div class="guest-avatar-full">
+          <div class="avatar-bg grad-4"></div>
+          <div class="avatar-overlay">
+            <span class="avatar-emoji">🏛️</span>
+            <span class="avatar-tag">Academic Guest</span>
+            <div class="avatar-reveal-text">Revealing Soon</div>
+          </div>
+        </div>
+        <div class="guest-card-info">
+          <div class="guest-card-name">Academic Guest</div>
+          <div class="guest-card-role">Science &amp; Society</div>
+          <div class="guest-card-org">NISER / IIT / IISER</div>
+        </div>
+      </div>
+
+      <!-- Card 5 – Folk Artist -->
+      <div class="guest-card-full animate-on-scroll animate-delay-2">
+        <div class="guest-avatar-full">
+          <div class="avatar-bg grad-5"></div>
+          <div class="avatar-overlay">
+            <span class="avatar-emoji">🎶</span>
+            <span class="avatar-tag">Folk Artist</span>
+            <div class="avatar-reveal-text">Revealing Soon</div>
+          </div>
+        </div>
+        <div class="guest-card-info">
+          <div class="guest-card-name">Folk Artist</div>
+          <div class="guest-card-role">Music &amp; Tradition</div>
+          <div class="guest-card-org">Sambalpuri Heritage</div>
+        </div>
+      </div>
+
+      <!-- Card 6 – Special Invitee -->
+      <div class="guest-card-full animate-on-scroll animate-delay-3">
+        <div class="guest-avatar-full">
+          <div class="avatar-bg grad-6"></div>
+          <div class="avatar-overlay">
+            <span class="avatar-emoji">💫</span>
+            <span class="avatar-tag">Special Invitee</span>
+            <div class="avatar-reveal-text">Revealing Soon</div>
+          </div>
+        </div>
+        <div class="guest-card-info">
+          <div class="guest-card-name">Special Invitee</div>
+          <div class="guest-card-role">Surprise Guest · TBA</div>
+          <div class="guest-card-org">Stay Tuned!</div>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+  </div>
+</section>
+
+<!-- ======================================================
+     TIMELINE — What to expect
+     ====================================================== -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll" style="margin-bottom:0.3rem;">Guest Schedule</h2>
+    <div class="ornament animate-on-scroll">
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond"></div>
+    </div>
+    <p class="section-subtitle animate-on-scroll">Programme flow for guest appearances on April 1, 2026</p>
+
+    <div style="max-width:640px; margin:0 auto;">
+      <div style="display:flex; flex-direction:column; gap:0;" id="timeline">
+        <!-- Timeline items -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FOOTER
+     ====================================================== -->
+<footer>
+  <div class="footer-logo">Utkal Divas 2026</div>
+  <div style="font-family:'Noto Serif Odia',serif; font-size:1rem; color:rgba(253,246,237,0.5); margin-top:0.2rem;">
+    ଉତ୍କଳ ଦିବସ · ଏନ୍ଆଇଏସ୍ଇଆର୍
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <a href="guests.html">Guests</a>
+  </div>
+  <div class="footer-sub">Organized by the Cultural Committee, NISER Bhubaneswar · April 1, 2026</div>
+  <div style="margin-top:1rem; font-size:0.75rem; color:rgba(253,246,237,0.25);">&copy; 2026 NISER Cultural Committee.</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Handle notify button
+  function handleNotify(btn) {
+    const input = btn.previousElementSibling;
+    if (!input.value || !input.value.includes('@')) {
+      input.style.borderColor = '#e05050';
+      setTimeout(() => input.style.borderColor = '', 1500);
+      return;
+    }
+    btn.textContent = '✓ Subscribed!';
+    btn.style.background = 'linear-gradient(135deg,#14a050,#0d7a38)';
+    btn.disabled = true;
+    input.disabled = true;
+    input.value = input.value;
+  }
+
+  // Render timeline
+  const timeline = [
+    { time: '9:30 AM',  label: 'Guest Arrival', desc: 'Guests welcomed at NISER main gate', icon: '🚗' },
+    { time: '10:00 AM', label: 'Inaugural Ceremony', desc: 'Lighting of the lamp & welcome address by Director, NISER', icon: '🪔' },
+    { time: '10:30 AM', label: 'Chief Guest Address', desc: 'Keynote address by Chief Guest', icon: '🎙️' },
+    { time: '11:15 AM', label: 'Cultural Felicitation', desc: 'Honouring cultural personalities present at the celebration', icon: '🌸' },
+    { time: '6:00 PM',  label: 'Evening Programme', desc: 'Guests join for Odissi performance & cultural evening', icon: '💃' },
+    { time: '7:00 PM',  label: 'Grand Cultural Night', desc: 'All guests invited for the grand cultural programme & dinner', icon: '🎭' },
+  ];
+
+  document.getElementById('timeline').innerHTML = timeline.map((item, i) => `
+    <div class="animate-on-scroll animate-delay-${(i % 3) + 1}" style="
+      display:flex; gap:1.5rem; padding:1.25rem 0;
+      border-bottom:${i < timeline.length-1 ? '1px solid var(--border-light)' : 'none'};
+      align-items:flex-start;">
+      <div style="
+        min-width:80px; text-align:right;
+        font-size:0.78rem; font-weight:600;
+        color:var(--saffron); padding-top:0.2rem;
+        line-height:1.3;">
+        ${item.time}
+      </div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:linear-gradient(135deg,var(--saffron),var(--gold));
+        display:flex; align-items:center; justify-content:center;
+        font-size:1rem; flex-shrink:0; box-shadow:var(--shadow);">
+        ${item.icon}
+      </div>
+      <div>
+        <div style="font-family:var(--font-display); font-size:1.05rem; font-weight:600; margin-bottom:0.2rem;">${item.label}</div>
+        <div style="font-size:0.85rem; color:var(--text-muted);">${item.desc}</div>
+      </div>
+    </div>
+  `).join('');
+</script>
+</body>
+</html>
