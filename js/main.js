@@ -27,7 +27,7 @@ const eventsData = [
   {
     id: 'painting-under15',
     title: 'Painting Competition (Below 15 years)',
-    titleOdia: 'ଚିତ୍ର ପ୍ରତିଯୋଗିତା',
+    titleOdia: 'ଚିତ୍ରାଙ୍କନ ପ୍ରତିଯୋଗିତା',
     category: 'Arts',
     icon: '🎨',
     color: '#ff6347',
@@ -47,7 +47,7 @@ const eventsData = [
   {
     id: 'painting-above15',
     title: 'Painting Competition (15+ years)',
-    titleOdia: 'ଚିତ୍ର ପ୍ରତିଯୋଗିତା',
+    titleOdia: 'ଚିତ୍ରାଙ୍କନ ପ୍ରତିଯୋଗିତା',
     category: 'Arts',
     icon: '🎨',
     color: '#ff6347',
