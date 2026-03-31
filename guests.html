@@ -111,6 +111,51 @@
       color: var(--saffron);
       font-weight: 500;
     }
+    .guest-card-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-top: 0.6rem;
+      text-align: left;
+    }
+    .guest-image-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #cccccc 0%, #999999 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #666;
+      position: relative;
+      overflow: hidden;
+    }
+    .guest-image-placeholder::after {
+      content: 'Image';
+      position: absolute;
+      font-size: 0.7rem;
+      color: #999;
+      bottom: 10px;
+      right: 10px;
+    }
+    .performance-highlight {
+      background: linear-gradient(135deg, var(--saffron), var(--gold));
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+      color: var(--white);
+    }
+    .performance-highlight h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .performance-highlight p {
+      font-size: 0.95rem;
+      opacity: 0.95;
+      margin-bottom: 1rem;
+    }
 
     /* Gradient backgrounds per card */
     .grad-1 { background: linear-gradient(135deg, #3d1200, #8b3a08); }
@@ -214,62 +259,90 @@
       <div class="ornament-diamond"></div>
     </div>
     <p class="section-subtitle animate-on-scroll">
-      3 distinguished guests across social leadership, entrepreneurship &amp; literature
+      Distinguished personalities from diverse fields including social leadership, technology, literature &amp; youth innovation
     </p>
 
     <div class="guests-grid-full">
 
-      <!-- Card 1 – J. P. Jagdev -->
+      <!-- Card 1 – Sujit Mahapatra -->
       <div class="guest-card-full animate-on-scroll animate-delay-1">
         <div class="guest-avatar-full">
-          <div class="avatar-bg grad-1"></div>
-          <div class="avatar-overlay">
-            <span class="avatar-emoji">👨‍💼</span>
-            <span class="avatar-tag">Social Leadership</span>
-            <div class="avatar-reveal-text">JPJ</div>
-          </div>
-        </div>
-        <div class="guest-card-info">
-          <div class="guest-card-name">J. P. Jagdev</div>
-          <div class="guest-card-role">Social & Cultural Initiatives</div>
-          <div class="guest-card-org">Udaygiri Foundation Trust</div>
-        </div>
-      </div>
-
-      <!-- Card 2 – Sujit Mahapatra -->
-      <div class="guest-card-full animate-on-scroll animate-delay-2">
-        <div class="guest-avatar-full">
-          <div class="avatar-bg grad-2"></div>
-          <div class="avatar-overlay">
-            <span class="avatar-emoji">🎓</span>
-            <span class="avatar-tag">Entrepreneur</span>
-            <div class="avatar-reveal-text">SM</div>
-          </div>
+          <div class="guest-image-placeholder"></div>
         </div>
         <div class="guest-card-info">
           <div class="guest-card-name">Sujit Mahapatra</div>
-          <div class="guest-card-role">Education & Community Engagement</div>
-          <div class="guest-card-org">Bakul Foundation</div>
+          <div class="guest-card-role">Founder, Bakul Foundation</div>
+          <div class="guest-card-org">Social Entrepreneurship</div>
+          <div class="guest-card-desc">
+            A visionary social entrepreneur dedicated to fostering a culture of reading, storytelling, and volunteerism across Odisha. Through Bakul Foundation, he has championed grassroots-level initiatives promoting literacy and community engagement.
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 – J. P. Jagadev -->
+      <div class="guest-card-full animate-on-scroll animate-delay-2">
+        <div class="guest-avatar-full">
+          <div class="guest-image-placeholder"></div>
+        </div>
+        <div class="guest-card-info">
+          <div class="guest-card-name">J. P. Jagadev</div>
+          <div class="guest-card-role">MD & CEO, Parameter Softwares (P) Ltd.</div>
+          <div class="guest-card-org">Technology & Heritage</div>
+          <div class="guest-card-desc">
+            A technology leader and cultural visionary bridging the gap between innovation and heritage. As Chairman of Udaygiri Foundation, he drives technology-enabled governance solutions while nurturing cultural preservation initiatives in Odisha.
+          </div>
         </div>
       </div>
 
       <!-- Card 3 – Jatindra Kumar Nayak -->
       <div class="guest-card-full animate-on-scroll animate-delay-3">
         <div class="guest-avatar-full">
-          <div class="avatar-bg grad-3"></div>
-          <div class="avatar-overlay">
-            <span class="avatar-emoji">📖</span>
-            <span class="avatar-tag">Literary Figure</span>
-            <div class="avatar-reveal-text">JKN</div>
-          </div>
+          <div class="guest-image-placeholder"></div>
         </div>
         <div class="guest-card-info">
           <div class="guest-card-name">Jatindra Kumar Nayak</div>
-          <div class="guest-card-role">Odia Literature & Academia</div>
-          <div class="guest-card-org">Sahitya Akademi</div>
+          <div class="guest-card-role">Writer, Translator & Academic</div>
+          <div class="guest-card-org">Odia Literary Arts</div>
+          <div class="guest-card-desc">
+            A venerated figure in Odia literature known for his profound contributions to creative writing, literary translation, and academic scholarship. His works have enriched Odia cultural discourse and inspired generations of readers and writers.
+          </div>
         </div>
       </div>
+
+      <!-- Card 4 – Swetak Abhisek Mohapatra -->
+      <div class="guest-card-full animate-on-scroll animate-delay-1">
+        <div class="guest-avatar-full">
+          <div class="guest-image-placeholder"></div>
+        </div>
+        <div class="guest-card-info">
+          <div class="guest-card-name">Swetak Abhisek Mohapatra</div>
+          <div class="guest-card-role">Young Innovator & Thought Leader</div>
+          <div class="guest-card-org">Youth & Innovation</div>
+          <div class="guest-card-desc">
+            An emerging voice representing the aspirations and ideas of contemporary youth. His perspectives on innovation, technology, and social impact bring a fresh and dynamic dimension to conversations about Odisha's future.
+          </div>
+        </div>
+      </div>
+
     </div><!-- /grid -->
+
+    <!-- Special Performance Highlight -->
+    <div class="performance-highlight animate-on-scroll" style="margin-top: 3rem;">
+      <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 200px;">
+          <div style="width: 200px; height: 200px; background: rgba(255,255,255,0.2); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto;">
+            🎤
+          </div>
+        </div>
+        <div style="flex: 1; min-width: 250px;">
+          <h3>✨ Stand-up Comedy Performance ✨</h3>
+          <p style="font-weight: 600; font-size: 1.1rem;">Debarchan Mishra</p>
+          <p style="margin-top: 0.5rem;">
+            The evening comes alive with an electrifying stand-up comedy performance by Debarchan Mishra, a celebrated comedian bringing humor, wit, and contemporary perspectives. A perfect blend of entertainment and engagement that will leave the audience in splits!
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
