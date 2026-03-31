@@ -6,43 +6,62 @@
 /* ---- Events Data ---- */
 const eventsData = [
   {
-    id: 'kabita-path',
-    title: 'Kabita Path',
+    id: 'poetry-odia',
+    title: 'Poetry Recitation (Odia)',
     titleOdia: 'କବିତା ପାଠ',
     category: 'Literary',
-    icon: '📜',
-    color: '#c8560a',
+    icon: '📝',
+    color: '#8b4513',
     date: 'April 1, 2026',
-    time: '10:00 AM – 11:30 AM',
-    venue: 'Seminar Hall, NISER',
-    registration: 'Open to all NISER students & faculty',
-    description: 'An open poetry recitation session celebrating the rich tradition of Odia literature. Participants are invited to read original or classical Odia poems, connecting the campus community with the literary heritage of Odisha.',
+    time: '4:30 PM – 6:00 PM',
+    venue: 'LH 4',
+    registration: 'Prior registration required (deadline: March 31)',
+    description: 'A poetry recitation session celebrating the richness of the Odia language and its literary heritage, organised in collaboration with Kalinga Bhasa Mukta Mancha.',
     rules: [
-      'Each participant will be allotted 3–5 minutes.',
-      'Poems must be in Odia (original or classical works).',
-      'Pre-registration is required; walk-ins may be accommodated based on availability.',
-      'Participants are encouraged to briefly introduce their poem before reciting.',
-      'A panel of judges will evaluate based on expression, diction, and impact.'
+      'Recitation must be in Odia',
+      'Poems may be original or from established authors',
+      'Maximum duration: 5 minutes',
+      'Prior registration required (deadline: 31st March)'
     ]
   },
   {
-    id: 'chitra',
-    title: 'Chitra Pratiyogita',
+    id: 'painting-under15',
+    title: 'Painting Competition (Below 15 years)',
     titleOdia: 'ଚିତ୍ର ପ୍ରତିଯୋଗିତା',
     category: 'Arts',
     icon: '🎨',
-    color: '#8b0000',
-    date: 'April 1, 2026',
-    time: '11:00 AM – 1:00 PM',
-    venue: 'Multipurpose Hall, NISER',
-    registration: 'Open to all NISER students',
-    description: 'A painting and sketching competition themed on Odisha — its culture, landscapes, festivals, and heritage. Participants may draw inspiration from Pattachitra, temple art, nature, or daily life in Odisha.',
+    color: '#ff6347',
+    date: 'April 3, 2026',
+    time: '9:00 AM – 6:00 PM',
+    venue: 'LH 5',
+    registration: 'On-the-spot competition',
+    description: 'An on-the-spot painting competition encouraging participants to artistically express themes inspired by Odisha.',
     rules: [
-      'Theme: "Odisha — Heritage, Culture, and Nature".',
-      'Materials (canvas, paper, brushes) will be provided; participants may bring their own.',
-      'Time limit: 2 hours.',
-      'Digital art is not permitted; only traditional media.',
-      'Entries will be judged on creativity, technique, and relevance to the theme.'
+      'On-the-spot competition',
+      'Drawing sheets will be provided',
+      'Participants must bring their own colours/materials',
+      'Theme: "Odisha: India\'s Best Kept Secret"',
+      'Selected works will be displayed on 4th April'
+    ]
+  },
+  {
+    id: 'painting-above15',
+    title: 'Painting Competition (15+ years)',
+    titleOdia: 'ଚିତ୍ର ପ୍ରତିଯୋଗିତା',
+    category: 'Arts',
+    icon: '🎨',
+    color: '#ff6347',
+    date: 'April 3-4, 2026',
+    time: 'Take-Home Submission',
+    venue: 'Submit on 4th April',
+    registration: 'Submission deadline: April 4, 10:00 AM',
+    description: 'Participants will complete their artwork in advance and submit it on the day of the main celebration.',
+    rules: [
+      'Take-home competition',
+      'Submission Deadline: 4th April 2026, 10:00 AM',
+      'Theme: "Odisha: India\'s Best Kept Secret"',
+      'Alternative Odia theme option: ଘନଘନ ବନଭୂମି ରାଜିତ ଅଙ୍ଗେ',
+      'Selected works will be displayed'
     ]
   },
   {
@@ -51,116 +70,61 @@ const eventsData = [
     titleOdia: 'ଅନ୍ଲାଇନ୍ କ୍ୱିଜ୍',
     category: 'Knowledge',
     icon: '🧠',
-    color: '#c49b0c',
-    date: 'April 1, 2026',
-    time: '2:00 PM – 3:00 PM',
-    venue: 'Computer Centre, NISER / Online',
-    registration: 'Register via the event portal',
-    description: 'A timed online quiz testing your knowledge of Odia history, culture, literature, geography, personalities, and current affairs related to Odisha. Results will be reflected live on the Quiz Leaderboard.',
+    color: '#4169e1',
+    date: 'Daily until April 3, 2026',
+    time: 'Any time',
+    venue: 'Official Instagram Page',
+    registration: 'Via Instagram',
+    description: 'An engaging quiz conducted through the official Instagram page, based on Odisha, culture, and general topics.',
     rules: [
-      'Quiz will consist of 40 multiple-choice questions.',
-      'Time limit: 30 minutes.',
-      'No external resources (books, internet) permitted.',
-      'Each correct answer carries 2 marks; no negative marking.',
-      'In case of a tie, the participant who finished in less time will be ranked higher.',
-      'Results will be declared on the Leaderboard page within 30 minutes.'
+      'Conducted daily until 3rd April',
+      'Based on Odisha, culture, and general topics',
+      'Final winner based on cumulative score',
+      'Prize for top performer',
+      'Follow official Instagram page for daily questions'
     ]
   },
   {
     id: 'jhoti',
-    title: 'Jhoti Competition',
-    titleOdia: 'ଝୋଟି ପ୍ରତିଯୋଗିତା',
+    title: 'Jhoti (Traditional Odia Rangoli)',
+    titleOdia: 'ଝୋଟି',
     category: 'Traditional Art',
-    icon: '🌸',
-    color: '#d4700a',
-    date: 'April 1, 2026',
-    time: '3:00 PM – 4:00 PM',
-    venue: 'Open Courtyard, NISER',
-    registration: 'Open to all; teams of 1–2 allowed',
-    description: 'Jhoti Chita is a traditional Odia art form — intricate patterns drawn on the ground or walls using rice paste. This competition invites participants to celebrate this ancient folk art form in all its geometric and symbolic beauty.',
+    icon: '🌾',
+    color: '#daa520',
+    date: 'April 3, 2026',
+    time: 'Evening (up to 3 hours)',
+    venue: 'In front of Pathani Samanta Auditorium',
+    registration: 'Limited to 15 participants (first-come basis)',
+    description: 'A traditional floor art competition celebrating Odisha\'s rich artistic heritage through Jhoti designs.',
     rules: [
-      'Each participant/team will be given a 3×3 ft designated area.',
-      'Materials (rice paste, chalk) will be provided.',
-      'Time limit: 45 minutes.',
-      'Designs may be traditional or contemporary inspired by Odia motifs.',
-      'Judging criteria: precision, creativity, and visual appeal.'
-    ]
-  },
-  {
-    id: 'rangoli',
-    title: 'Rangoli Competition',
-    titleOdia: 'ରଙ୍ଗୋଲି ପ୍ରତିଯୋଗିତା',
-    category: 'Traditional Art',
-    icon: '🎆',
-    color: '#a020a0',
-    date: 'April 1, 2026',
-    time: '3:30 PM – 5:00 PM',
-    venue: 'Main Entrance, NISER',
-    registration: 'Teams of 2–4 members',
-    description: 'Create vibrant and elaborate rangoli patterns inspired by Odishan festivals, temples, and nature. This is a team event celebrating colour, creativity, and cultural expression.',
-    rules: [
-      'Teams may consist of 2–4 participants.',
-      'Coloured powder, rice, and flowers will be provided.',
-      'Each team will be allocated a 4×4 ft area.',
-      'Time limit: 90 minutes.',
-      'Theme: "Festivals and Celebrations of Odisha".'
-    ]
-  },
-  {
-    id: 'odissi',
-    title: 'Odissi Performance',
-    titleOdia: 'ଓଡ଼ିଶୀ ନୃତ୍ୟ',
-    category: 'Performing Arts',
-    icon: '💃',
-    color: '#8b0000',
-    date: 'April 1, 2026',
-    time: '6:00 PM – 7:00 PM',
-    venue: 'Open-Air Theatre, NISER',
-    registration: 'Invitation / pre-selected performers',
-    description: 'A captivating performance of Odissi — one of the eight classical dance forms of India, originating from the temples of Odisha. Selected performers from NISER's cultural society will present this treasured classical art.',
-    rules: [
-      'This is a curated performance, not a competition.',
-      'Duration per performer: 8–12 minutes.',
-      'Costumes and music arrangements to be coordinated with the event team.',
-      'Audience participation and photography are encouraged.'
-    ]
-  },
-  {
-    id: 'cultural',
-    title: 'Cultural Programme',
-    titleOdia: 'ସାଂସ୍କୃତିକ ଅନୁଷ୍ଠାନ',
-    category: 'Cultural',
-    icon: '🎭',
-    color: '#1a6b4a',
-    date: 'April 1, 2026',
-    time: '7:00 PM – 9:00 PM',
-    venue: 'Open-Air Stage, NISER',
-    registration: 'Open audience',
-    description: 'The grand finale of Utkal Divas 2026 — a vibrant cultural programme featuring folk music, Sambalpuri dance, skit performances, and a special musical evening celebrating the diverse cultural traditions of Odisha. All are welcome!',
-    rules: [
-      'Open to all students, faculty, and guests.',
-      'Participating groups must register with the Cultural Committee by March 25.',
-      'Each group is allotted 10–15 minutes of stage time.',
-      'Performances must be themed around Odisha's culture and heritage.',
-      'A light dinner will be served post-programme.'
+      'Limited to 15 participants (first-come basis)',
+      'Maximum duration: 3 hours',
+      'All materials will be provided by organisers',
+      'Participants are not required to bring anything',
+      'Celebrate Odisha\'s rich artistic heritage through traditional Jhoti designs'
     ]
   }
 ];
 
 /* ---- Leaderboard Data ---- */
 const leaderboardData = [
-  { rank: 1, name: 'Priya Panigrahi',   dept: 'Physics',   score: 95, time: '18:32' },
-  { rank: 2, name: 'Rajesh Mohapatra',  dept: 'Chemistry', score: 92, time: '19:10' },
-  { rank: 3, name: 'Sasmita Sahoo',     dept: 'Biology',   score: 90, time: '20:05' },
-  { rank: 4, name: 'Aditya Kumar Dash', dept: 'Mathematics', score: 86, time: '21:15' },
-  { rank: 5, name: 'Sunita Nayak',      dept: 'Earth Science', score: 84, time: '22:40' },
-  { rank: 6, name: 'Biswa Ranjan Jena', dept: 'Physics',   score: 82, time: '23:05' },
-  { rank: 7, name: 'Lipika Parida',     dept: 'Chemistry', score: 80, time: '23:50' },
-  { rank: 8, name: 'Debashis Behera',   dept: 'Biology',   score: 78, time: '24:20' },
-  { rank: 9, name: 'Ananya Senapati',   dept: 'Mathematics', score: 76, time: '25:00' },
-  { rank: 10, name: 'Santosh Pradhan',  dept: 'Physics',   score: 74, time: '26:10' },
-  { rank: 11, name: 'Mitali Das',       dept: 'Chemistry', score: 72, time: '26:55' },
-  { rank: 12, name: 'Rahul Mishra',     dept: 'Earth Science', score: 70, time: '27:30' },
+  { rank: 1, name: 'amit_kumarpradhan2706', score: 8 },
+  { rank: 2, name: 'amitanshupattnayak', score: 8 },
+  { rank: 3, name: 'dev_debasish_99', score: 7 },
+  { rank: 4, name: 'prachites', score: 7 },
+  { rank: 5, name: 'sundar.aahe', score: 6 },
+  { rank: 6, name: 'sahoobiswajit_18', score: 5 },
+  { rank: 7, name: 'sameekshya_kar', score: 5 },
+  { rank: 8, name: 'priyabrata_dash_', score: 5 },
+  { rank: 9, name: 'vibrant_hero010', score: 5 },
+  { rank: 10, name: 'subha_mini_world', score: 5 },
+  { rank: 11, name: 'satyamshivam0221', score: 4 },
+  { rank: 12, name: 'iam_bidhu_._', score: 3 },
+  { rank: 13, name: 'sunitahhh.in', score: 1 },
+  { rank: 14, name: 'karismakakarishma', score: 1 },
+  { rank: 15, name: 'mamalikhatua23', score: 1 },
+  { rank: 16, name: 'durga_maa_980', score: 1 },
+  { rank: 17, name: 'awmresh_', score: 1 },
 ];
 
 /* ================================================================
@@ -302,7 +266,7 @@ function renderLeaderboard() {
   const tableBody = document.getElementById('lb-tbody');
   if (!tableBody) return;
 
-  const maxScore = leaderboardData[0].score;
+  const maxScore = Math.max(...leaderboardData.map(d => d.score));
   tableBody.innerHTML = leaderboardData.map(item => {
     const badgeClass = item.rank === 1 ? 'gold' : item.rank === 2 ? 'silver' : item.rank === 3 ? 'bronze' : '';
     const pct = Math.round((item.score / maxScore) * 100);
@@ -311,7 +275,6 @@ function renderLeaderboard() {
       <tr class="${rowClass}">
         <td><span class="rank-badge ${badgeClass}${item.rank === 1 ? ' rank-pulse' : ''}">${item.rank}</span></td>
         <td><strong>${item.name}</strong></td>
-        <td>${item.dept}</td>
         <td>
           <div class="score-bar-wrap">
             <div class="score-bar">
@@ -320,7 +283,6 @@ function renderLeaderboard() {
             <span class="score-num">${item.score}</span>
           </div>
         </td>
-        <td>${item.time}</td>
       </tr>`;
   }).join('');
 
@@ -340,13 +302,12 @@ function renderPodium() {
   const order = [leaderboardData[1], leaderboardData[0], leaderboardData[2]];
   const heights = ['55px', '90px', '44px'];
   const medals = ['🥈', '🥇', '🥉'];
-  const initials = name => name.split(' ').map(n => n[0]).join('');
+  const initials = name => name.split('_').map((n, i) => i === 0 ? n[0].toUpperCase() : '').join('');
 
   podium.innerHTML = order.map((item, i) => `
     <div class="podium-item animate-on-scroll animate-delay-${i + 1}">
       <div class="podium-avatar">${initials(item.name)}</div>
       <div class="podium-name">${item.name}</div>
-      <div class="podium-dept">${item.dept}</div>
       <div class="podium-score">${item.score} pts</div>
       <div class="podium-block" style="height:${heights[i]}">${medals[i]}</div>
     </div>
