@@ -107,6 +107,7 @@ const eventsData = [
 ];
 
 /* ---- Leaderboard Data ---- */
+<<<<<<< HEAD
 const leaderboardData = [
   { rank: 1, name: 'sunitahhh.in', score: 1 },
   { rank: 2, name: 'iam_bidhu_._', score: 3 },
@@ -147,6 +148,48 @@ const leaderboardData = [
   { rank: 37, name: 'sushree.3697', score: 10 },
   { rank: 38, name: 'satyajit_17_mishra', score: 8 },
   { rank: 39, name: 'maithili_2005', score: 3 },
+=======
+let leaderboardData = [
+  { rank: 1, name: 'dev_debasish_99', score: 39 },
+  { rank: 2, name: 'subhasish.nayak.5895', score: 35 },
+  { rank: 3, name: 'amit_kumarpradhan2706', score: 29 },
+  { rank: 4, name: 'amitanshupattnayak', score: 29 },
+  { rank: 5, name: 'priyabrata_dash_', score: 28 },
+  { rank: 6, name: 'sameekshya_kar', score: 27 },
+  { rank: 7, name: 'vibrant_hero010', score: 27 },
+  { rank: 8, name: 'subha_mini_world', score: 27 },
+  { rank: 9, name: 'prachites', score: 27 },
+  { rank: 10, name: 'shushi_22_07', score: 27 },
+  { rank: 11, name: 'jigyanshaa_', score: 27 },
+  { rank: 12, name: 'sundar.aahe', score: 25 },
+  { rank: 13, name: 'awmresh_', score: 24 },
+  { rank: 14, name: 'sahoobiswajit_18', score: 19 },
+  { rank: 15, name: 'sahil.mahapatra.395', score: 19 },
+  { rank: 16, name: '0208_sagar', score: 18 },
+  { rank: 17, name: 'mohan_d._', score: 16 },
+  { rank: 18, name: 'chemophillic1', score: 16 },
+  { rank: 19, name: 'debashreemona', score: 15 },
+  { rank: 20, name: '_rakesh_2428_', score: 14 },
+  { rank: 21, name: 'reeta9397', score: 13 },
+  { rank: 22, name: 'suryakanta7344', score: 13 },
+  { rank: 23, name: 'lens_of_op', score: 12 },
+  { rank: 24, name: 'sushree.3697', score: 10 },
+  { rank: 25, name: 'mamalikhatua23', score: 9 },
+  { rank: 26, name: 'satyamshivam0221', score: 9 },
+  { rank: 27, name: '_rrp_asis_', score: 9 },
+  { rank: 28, name: 'satyajit_17_mishra', score: 8 },
+  { rank: 29, name: 'aradhanapani', score: 7 },
+  { rank: 30, name: 'durga_maa_980', score: 6 },
+  { rank: 31, name: 'bhagya04shree01', score: 6 },
+  { rank: 32, name: 'anita_patra987', score: 6 },
+  { rank: 33, name: 'shree_jagannathadham', score: 5 },
+  { rank: 34, name: 'surjya.194', score: 4 },
+  { rank: 35, name: 'iam_bidhu_._', score: 3 },
+  { rank: 36, name: 'maithili_2005', score: 3 },
+  { rank: 37, name: 'anil_patel9490', score: 2 },
+  { rank: 38, name: 'sunitahhh.in', score: 1 },
+  { rank: 39, name: 'karismakakarishma', score: 1 },
+>>>>>>> 5fabb7cb6732ece4bb57a38771c1b5a4e8ca784c
 ];
 
 /* ================================================================
